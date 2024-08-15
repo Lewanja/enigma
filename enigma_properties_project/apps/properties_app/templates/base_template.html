@@ -20,15 +20,18 @@
         <li><a href="{% url 'list_property' %}">Properties</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="#">Contact</a></li>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary">
+            <a href="{% url 'user_login' %}"> Account </a>
+          </button>
+        </div>
       </ul>
+
     </div>
   </nav>
   {% endblock %}
 
-  <div class="container">
-    <h3>Latest Property</h3>
-    <p>Properties uploaded within the last 3 months</p>
-  </div>
+
   <div id="content">
   {% block content %} {% endblock %}
   </div>

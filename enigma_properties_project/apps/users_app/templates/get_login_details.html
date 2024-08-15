@@ -1,5 +1,7 @@
+{% extends 'base_template.html' %}
 
-<body>
+{% block content %}
+
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -30,4 +32,4 @@
 <input type="hidden" name="next" value="{{ next }}">
 </form>
 
-</body>
+{% endblock %}

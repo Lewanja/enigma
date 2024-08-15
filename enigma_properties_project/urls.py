@@ -23,7 +23,7 @@ urlpatterns = [
     path('', home, name="home"),
     path('admin/', admin.site.urls),
     path('properties/', include('enigma_properties_project.apps.properties_app.urls')),
-    path('users/', include('enigma_properties_project.apps.users_app.urls')),
+    path('user/', include('enigma_properties_project.apps.users_app.urls')),
     path('schedule_visit/', include('enigma_properties_project.apps.property_interested_app.urls')),
 
 ]

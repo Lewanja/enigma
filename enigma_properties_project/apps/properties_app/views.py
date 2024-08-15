@@ -17,11 +17,6 @@ def index(request):
 def home(request):
     return render(request, 'home.html')
 
-
-def ruiru_mansion_gallery(request):
-    return render(request, 'ruiru_4bedroom_mansion.html')
-
-
 def list_properties(request):
     existing_property = Property.objects.all()
     return render(request, 'view_property/list_property.html', {'property': existing_property})

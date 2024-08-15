@@ -5,8 +5,9 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.css" />
 
 <script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
-
-<a href="{% url 'add_property'%}"> add property</a>
+<div class="btn-group" role="group" aria-label="Basic example">
+<button type="button" class="btn btn-secondary"> <a href="{% url 'add_property' %}"> add property</a> </button>
+</div>
 
     <h1>Properties</h1>
     <table id="propertiesTable" >

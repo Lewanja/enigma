@@ -21,7 +21,8 @@ def login_view(request):
             obj = User.objects.get(username=username)
             return render(request, "index.html", context={"obj": obj})
         else:
-            return HttpResponse("Invalid! User does not exist")
+            # redirects to user creation form in case user is not found
+            return redirect('register')
 
     elif request.method == "GET":
         form = AuthenticationForm()
@@ -38,7 +39,7 @@ def register_user(request):
         if form.is_valid():
             user = form.save()
             login(request, user)  # Automatically log the user in after registration
-            return redirect('index')  # Redirect to a home page or some other page
+            return redirect('home')  # Redirect to a home page or some other page
     else:
         form = CustomUserCreationForm()
 
