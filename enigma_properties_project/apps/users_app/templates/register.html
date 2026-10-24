@@ -1,0 +1,20 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+
+    <h1>Register User</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.help_text|safe }}
+
+
+       <button type="submit" class="btn btn-primary">Register</button
+    </form>
+
+
+</form>
+
+
+{% endblock %}
